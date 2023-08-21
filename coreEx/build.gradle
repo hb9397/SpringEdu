@@ -15,6 +15,10 @@ repositories {
     mavenCentral()
 }
 
+wrapper {
+    gradleVersion = '9.0' // 최신 Gradle 버전으로 업데이트
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
