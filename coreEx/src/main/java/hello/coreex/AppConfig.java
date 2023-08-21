@@ -8,14 +8,23 @@ import hello.coreex.order.OrderService;
 import hello.coreex.order.OrderServiceImpl;
 
 public class AppConfig {
+	// PS -> 메서드 대체 단축키는 Ctrl + Alt + M 하면 가능 -> new 로 생성 하는 대신 새로운 생성자 생성해주면서 메서드 호출로 대체
 	public MemberService memberService(){
-		return new MemberServiceImpl(new MemoryMemberRepository());
+		return new MemberServiceImpl(memberRepository());
+	}
+
+	private static MemoryMemberRepository memberRepository() {
+		return new MemoryMemberRepository();
 	}
 
 	public OrderService orderService(){
 		return new OrderServiceImpl(
-			new MemoryMemberRepository(),
-			new FixDiscountPolicy()
+			memberRepository(),
+			discountPolicy()
 		);
+	}
+
+	private static FixDiscountPolicy discountPolicy() {
+		return new FixDiscountPolicy();
 	}
 }
