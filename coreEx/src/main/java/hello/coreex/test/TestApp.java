@@ -1,5 +1,8 @@
 package hello.coreex.test;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import hello.coreex.AppConfig;
 import hello.coreex.member.Grade;
 import hello.coreex.member.Member;
@@ -13,9 +16,12 @@ public class TestApp {
 		main 메서드로 테스트를 진행하는데는 한계점도 있으며, 바람직한 방법도 아니므로 JUnit 을 이용하자~
 	*/
 	public static void main(String[] args) {
-		AppConfig appConfig = new AppConfig();
-		MemberService memberService = appConfig.memberService();
-		OrderService orderService = appConfig.orderService();
+		//AppConfig appConfig = new AppConfig();
+		//MemberService memberService = appConfig.memberService();
+
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
+		OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
 
 		long memberId = 1L;
 		Member member = new Member(memberId, "memberA", Grade.VIP);
