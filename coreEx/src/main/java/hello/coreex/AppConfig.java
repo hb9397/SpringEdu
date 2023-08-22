@@ -1,6 +1,8 @@
 package hello.coreex;
 
+import hello.coreex.discount.DiscountPolicy;
 import hello.coreex.discount.FixDiscountPolicy;
+import hello.coreex.discount.RateDiscountPolicy;
 import hello.coreex.member.MemberService;
 import hello.coreex.member.MemberServiceImpl;
 import hello.coreex.member.MemoryMemberRepository;
@@ -24,7 +26,8 @@ public class AppConfig {
 		);
 	}
 
-	private static FixDiscountPolicy discountPolicy() {
-		return new FixDiscountPolicy();
+	private static DiscountPolicy discountPolicy() {
+		//return new FixDiscountPolicy();
+		return new RateDiscountPolicy();
 	}
 }
