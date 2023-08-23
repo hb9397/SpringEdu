@@ -4,7 +4,7 @@
 | 번호 | 강의 이름 | 디렉토리 | 진척도 |
 | :---: | --- | --- | --- |
 | 1 | 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 | [hello-spring](/hello-spring) | ![100%](https://progress-bar.dev/28/?width=200&scale=28&suffix=/28) |
-| 2 | 스프링 핵심 원리 - 기본편 | [coreEx](/coreEx) | ![100%](https://progress-bar.dev/27/?width=200&scale=65&suffix=/65)
+| 2 | 스프링 핵심 원리 - 기본편 | [coreEx](/coreEx) | ![100%](https://progress-bar.dev/30/?width=200&scale=65&suffix=/65)
 | 3 | 모든 개발자를 위한 HTTP 웹 기본 지식 | | ![100%](https://progress-bar.dev/0/?width=200&scale=41&suffix=/41) |
 | 4 | 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술 | | ![100%](https://progress-bar.dev/0/?width=200&scale=72&suffix=/72) |
 | 5 | 스프링 MVC 2편 - 백엔드 웹 개발 활용 기술 | | ![100%](https://progress-bar.dev/0/?width=200&scale=129&suffix=/129) |
