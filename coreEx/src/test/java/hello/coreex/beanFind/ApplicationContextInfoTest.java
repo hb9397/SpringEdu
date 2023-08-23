@@ -14,7 +14,7 @@ public class ApplicationContextInfoTest {
 	@DisplayName("모든 빈 출력하기")
 	void findAllBean(){
 		String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-		// 위와 같이 Iterator 를 적용할 수 있을 때, 인텔리제이에서 iter 을 입력하면 아래와 같이 이터레이터 반복문을 생성해 준다.
+		// 위와 같이 이터레이터를 적용할 수 있다면, iter 입력으로 아래와 같은 반복문을 자동완성 해준다~!
 
 		for (String beanDefinitionName : beanDefinitionNames){
 			Object bean = applicationContext.getBean(beanDefinitionName);
