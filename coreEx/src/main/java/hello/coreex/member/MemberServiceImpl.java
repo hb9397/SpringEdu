@@ -21,4 +21,11 @@ public class MemberServiceImpl implements MemberService{
 	public Member findMember(Long memberId) {
 		return memberRepository.findById(memberId);
 	}
+
+	// AppConfig 에서 MemberServiceImpl 과 OrderServiceImpl 을 스프링 컨테이너를 통해 생성할 때,
+	// 각각 MemberRepository 를 호출하는데 이는 마치 싱글톤을 어기는 것으로 보여진다.
+	// 이를 위해 테스트용 MemberRepository 조회 코드를 추가한다.
+	public MemberRepository getMemberRepository() {
+		return memberRepository;
+	}
 }
