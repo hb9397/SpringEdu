@@ -40,4 +40,11 @@ public class OrderServiceImpl implements OrderService{
 
 		return new Order(memberId, itemName, itemPrice, discountPrice);
 	}
+
+	// @Configuration 이 AppConfig 에서 MemberService 와 OrderService 가 계속해서 새로운 MemoryMemberRespository 를 생성하는 것과 같아 보이는데
+	// 어떻게 싱글톤을 보장하는가에 대한 Test Code 를 위한 테스용 메서드
+
+	public MemberRepository getMemberRepository() {
+		return memberRepository;
+	}
 }
