@@ -1,8 +1,11 @@
 package hello.coreex.discount;
 
+import org.springframework.stereotype.Component;
+
 import hello.coreex.member.Grade;
 import hello.coreex.member.Member;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy{
 	private int discountPercent = 10;
 
